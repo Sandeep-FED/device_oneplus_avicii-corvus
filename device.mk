@@ -61,5 +61,9 @@ PRODUCT_PACKAGES += \
 # Inherit from oneplus sm7250-common
 $(call inherit-product, device/oneplus/sm7250-common/common.mk)
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/oneplus/avicii/avicii-vendor.mk)
