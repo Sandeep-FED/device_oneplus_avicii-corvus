@@ -24,9 +24,11 @@ $(call inherit-product, device/oneplus/avicii/device.mk)
 # Inherit some common Cherish stuff.
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-# PixelExperience Properties
+# Cherish Properties
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_USES_CUSTOM_AVB_KEY := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := cherish_avicii
 PRODUCT_DEVICE := avicii
@@ -35,6 +37,7 @@ PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := AC2001
 CUSTOM_DEVICE := Nord
 
+
 PRODUCT_SYSTEM_NAME := Nord
 PRODUCT_SYSTEM_DEVICE := Nord
 
@@ -42,6 +45,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cherish.maintainer=Snippetguy
+
+CHERISH_BUILD_TYPE := OFFICIAL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=Nord \
