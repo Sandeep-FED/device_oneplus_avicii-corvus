@@ -24,6 +24,9 @@ $(call inherit-product, device/oneplus/avicii/device.mk)
 # Inherit some common Cherish stuff.
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
+#Inherit Pixel Launcher
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+
 # Cherish Properties
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_USES_CUSTOM_AVB_KEY := true
