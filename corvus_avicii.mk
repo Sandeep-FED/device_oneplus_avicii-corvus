@@ -22,33 +22,31 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/avicii/device.mk)
 
 # Inherit some common Cherish stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 # Cherish Properties
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_USES_CUSTOM_AVB_KEY := true
-EXTRA_UDFPS_ANIMATIONS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+USE_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
 
-PRODUCT_NAME := cherish_avicii
+PRODUCT_NAME := corvus_avicii
 PRODUCT_DEVICE := avicii
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := AC2001
 CUSTOM_DEVICE := Nord
 
-
 PRODUCT_SYSTEM_NAME := Nord
 PRODUCT_SYSTEM_DEVICE := Nord
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=Snippetguy
-
-CHERISH_BUILD_TYPE := OFFICIAL
+CORVUS_MAINTAINER=Rayden|Snippetguy
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=Nord \
