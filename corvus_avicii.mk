@@ -35,6 +35,8 @@ TARGET_GAPPS_ARCH := arm64
 #Corvus Official
 RAVEN_LAIR := Official
 FOD_RESOURCES := true
+CORVUS_MAINTAINER=Snippetguy
+USE_GAPPS := true
 
 PRODUCT_NAME := corvus_avicii
 PRODUCT_DEVICE := avicii
